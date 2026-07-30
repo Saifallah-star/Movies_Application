@@ -54,7 +54,7 @@ class _MoviesScreenState extends State<MoviesScreen> {
             ),
             const SizedBox(width: 12),
             const Text(
-              'CinePulse',
+              'Movies Hub ',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w900,
