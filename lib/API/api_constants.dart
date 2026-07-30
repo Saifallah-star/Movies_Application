@@ -1,3 +1,5 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 class Constants {
   static const String baseUrl = 'https://api.themoviedb.org/3';
   static const String movieURL = 'https://api.themoviedb.org/3/movie';
@@ -6,7 +8,13 @@ class Constants {
   static const String topRatedEndpoint = '/top_rated';
   static const String upcomingEndpoint = '/upcoming';
   static const String searchEndpoint = '/search/movie';
-  static const String apiKey = 'c1b483969f7059413149ef52740c231a';
+
+  /// Dynamically fetch API Key from .env or --dart-define
+  static String get apiKey {
+    return dotenv.env['TMDB_API_KEY'] ??
+        const String.fromEnvironment('TMDB_API_KEY', defaultValue: '');
+  }
+
 
   // TMDB Image Base URLs
   static const String imageBaseUrl = 'https://image.tmdb.org/t/p/w500';

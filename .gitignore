@@ -12,16 +12,41 @@
 .swiftpm/
 migrate_working_dir/
 
+# Environment variables & API keys
+.env
+.env.*
+*.env
+!.env.example
+lib/api_keys.dart
+lib/secrets.dart
+lib/API/api_keys.dart
+lib/API/secrets.dart
+
+# Sensitive Credentials & Keys
+*.keystore
+*.jks
+*.p12
+*.pem
+*.cer
+*.crt
+*.pfx
+
+# Android sensitive files
+android/key.properties
+android/app/google-services.json
+
+# iOS sensitive files
+ios/Runner/GoogleService-Info.plist
+*.mobileprovision
+
 # IntelliJ related
 *.iml
 *.ipr
 *.iws
 .idea/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# Visual Studio Code related
+.vscode/
 
 # Flutter/Dart/Pub related
 **/doc/api/
@@ -43,3 +68,4 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
